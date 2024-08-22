@@ -4,13 +4,23 @@ A full-stack ride-hailing app built with modern web and mobile technologies, ins
 
 ## 🌟 Features
 
-- **Real-Time Geolocation & Maps**: Powered by Google Maps API for real-time ride tracking and location services.
-- **User Authentication**: Secure user management using **Clerk** for sign-up, login, and profile management.
-- **Ride Requests**: Users can request rides, and drivers are matched in real-time.
-- **Booking History**: View and manage previous ride bookings.
-- **Interactive UI**: Styled with **NativeWind** for responsive, utility-first design.
-- **TypeScript Support**: Ensuring robust, type-safe code throughout the project.
-- **Backend**: Powered by **PostgreSQL** for database management and scalable backend support.
+- **Onboarding Flow**: Seamless user registration and setup process for new users.
+- **Email & Password Authentication with Verification**: Secure login system with email verification.
+- **OAuth Using Google**: Effortless login via Google credentials for easy access.
+- **Authorization**: Secure role-based access control for different user types (e.g., riders, drivers).
+- **Home Screen with Live Location & Google Map**: Real-time user location tracking and dynamic map updates with Google Maps.
+- **Recent Rides**: Quick view of recently booked or completed rides.
+- **Google Places Autocomplete**: Search any location globally with intelligent autocomplete suggestions.
+- **Find Rides**: Easily search for rides by entering departure ('From') and destination ('To') locations.
+- **Select Rides from Map**: View and select available cars near your location directly from the map.
+- **Confirm Ride with Detailed Information**: Comprehensive ride details, including estimated time and fare before confirming the ride.
+- **Pay for Ride Using Stripe**: Secure payments via Stripe with support for multiple payment methods like cards and other options.
+- **Create Ride After Successful Payment**: Book a ride automatically after completing payment.
+- **Profile Management**: Manage user account details such as name, email, and preferences in the profile section.
+- **Ride History**: View and manage all previously booked rides.
+- **Responsive on Android and iOS**: Optimized for seamless performance on both Android and iOS devices.
+
+…and many more advanced features, including a focus on clean code architecture and reusability across the app!
 
 ## 🛠 Tech Stack
 
