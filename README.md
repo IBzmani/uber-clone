@@ -105,12 +105,3 @@ Contributions are welcome! Feel free to open issues or submit pull requests to i
 
 ## 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-### Key Sections Explained:
-- **Features**: Highlights what the app offers.
-- **Tech Stack**: Describes the tools and technologies used.
-- **Getting Started**: Step-by-step guide to get the app running locally.
-- **Project Structure**: A map of your directory layout, helping contributors navigate the codebase.
-- **Contributors and License**: Encourages collaboration and clarifies usage rights.
-
-Let me know if you need further customization!
