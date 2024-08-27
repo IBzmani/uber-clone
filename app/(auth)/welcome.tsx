@@ -1,15 +1,17 @@
-import { Text } from "react-native";
+import { Image, Text } from "react-native";
 import React, { useState, useRef } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { TouchableOpacity } from "react-native";
 import { router } from "expo-router";
 import Swiper from "react-native-swiper";
-import { View } from "react-native-reanimated/lib/typescript/Animated";
+import { View } from "react-native";
 import { onboarding } from "@/constants";
+import CustomButton from "@/components/CustomButton";
 
 const Onboarding = () => {
   const swiperRef = useRef<Swiper>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const isLastSlide = activeIndex === onboarding.length - 1;
   return (
     <SafeAreaView className="flex h-full items-center justify-between bg-white">
       <TouchableOpacity
@@ -35,26 +37,37 @@ const Onboarding = () => {
       >
         {onboarding.map((item) => {
           return (
-            <View key={item.id} className="flex items-center justify-center">
-              <View className="w-full h-[400px]">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-contain"
-                />
-              </View>
-              <View className="w-full px-5">
-                <Text className="text-black text-2xl font-JakartaExtraBold text-center">
+            <View
+              key={item.id}
+              className="flex items-center justify-center p-5"
+            >
+              <Image
+                source={item.image}
+                alt={item.title}
+                className="w-full h-[300px]"
+                resizeMode="contain"
+              />
+              <View className="flex flex-row items-center justify-center mt-10 w-full">
+                <Text className="text-black text-3xl font-bold mx-10 text-center">
                   {item.title}
                 </Text>
-                <Text className="text-black text-base font-JakartaRegular text-center">
-                  {item.description}
-                </Text>
               </View>
+              <Text className="text-lg font-JakartaSemiBold text-center text-[#858585] mx-10 mt-3">
+                {item.description}
+              </Text>
             </View>
           );
         })}
       </Swiper>
+      <CustomButton
+        title={isLastSlide ? "Get Started" : "Next"}
+        onPress={() =>
+          isLastSlide
+            ? router.replace("/(auth)/sign-up" as never)
+            : swiperRef.current?.scrollBy(1)
+        }
+        className="w-11/12 mt-10"
+      />
     </SafeAreaView>
   );
 };
