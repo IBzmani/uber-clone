@@ -9,7 +9,10 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-%ProgramData%
+
+# Ignore Windows system directories
+%ProgramData%/
+
 
 # macOS
 .DS_Store
