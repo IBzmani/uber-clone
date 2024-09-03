@@ -31,7 +31,7 @@ const Layout = () => (
     screenOptions={{
       tabBarActiveTintColor: "white",
       tabBarInactiveTintColor: "white",
-      //   headerShown: false,
+      headerShown: false,
       tabBarShowLabel: false,
       tabBarStyle: {
         backgroundColor: "#333333",
