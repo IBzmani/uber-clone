@@ -2,6 +2,7 @@ import GoogleTextInput from "@/components/GoogleTextInput";
 import Map from "@/components/Map";
 import RideCard from "@/components/RideCard";
 import { icons, images } from "@/constants";
+import { useLocationStore } from "@/store";
 import { SignedIn, SignedOut, useUser } from "@clerk/clerk-expo";
 import { Link } from "expo-router";
 import {
@@ -122,6 +123,7 @@ const recentRides = [
 ];
 
 export default function Page() {
+  const { setUserLocation, setDestinationLocation } = useLocationStore();
   const { user } = useUser();
   const loading = true;
 
